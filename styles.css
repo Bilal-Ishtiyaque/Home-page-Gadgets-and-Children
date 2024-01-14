@@ -1,0 +1,635 @@
+/* The template that I cloned : 
+https://www.freepik.com/free-psd/gadget-impact-landing-page-template_10290248.htm#query=website%20039&position=3&from_view=search&track=ais&uuid=f944ac07-3acd-4eff-a743-7a52dc22198f */
+
+
+/* fonts :
+monserrat
+poppins
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;700&display=swap');
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+    --purple: #4d435d;
+    --sea-green: #9dccd8;
+    --links: #effcff;
+    --title:#41303b ;
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+    --box-shadow: inset 2.121px 2.121px 3.5px rgba(46,33,17,0.35);;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins";
+    font-weight: 400;
+    background-color: var(--links);
+}
+
+
+.bold {
+    font-weight: 700;
+    letter-spacing: 3px;
+
+}
+
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+header {
+
+    box-shadow: var(--box-shadow);
+    border-bottom-left-radius: 9rem 2.5rem;
+    background-color: var(--sea-green);
+    padding-inline: 0.5rem;
+    border-bottom-left-radius: 11% 40%;
+    border-bottom-right-radius: 11% 40%;
+}
+
+.main-header {
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    gap: 47px;
+    padding: 17px 20px;
+    margin-inline: auto;
+    box-shadow: var(--box-shadow);
+    border-bottom-left-radius: 62% 27rem;
+    border-bottom-right-radius: 62% 27rem;
+}
+
+
+/* logo, search bar, search icon  */
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.box i{
+    cursor: pointer;
+}
+
+
+.box img {
+    width: 9.375rem;
+}
+
+
+
+/* search-box 1 (search box on header) */
+
+
+
+.search-box {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+
+.search-box input {
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 10px;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+
+.search-box i{
+    pointer-events: none;
+}
+
+.search-box input::placeholder {
+    color: var(--purple);
+}
+
+
+
+
+/* search-box 1  (search box on header) */
+
+
+/* hamburger menu  */
+
+.menu {
+    margin-left: 18px;
+    font-size: 1.25rem;
+    display: none;
+}
+
+
+/* logo */
+
+.logo {
+    margin-right: 40px;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+
+
+/* Navbar Search Box 2 */
+
+.search-box-2 {
+
+
+    display: none;
+    color: white;
+    width: auto;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.search-box-2 input {
+    border: none;
+    border-radius: 20px;
+    padding: 6px 10px;
+}
+
+.search-box-2 input::placeholder {
+    color: var(--purple);
+}
+
+.search-box-2 input:focus {
+    outline: none;
+}
+
+
+/* Navbar Search Box 2 */
+
+
+nav button i {
+    -webkit-text-stroke-width: 1px;
+    font-size: 20px;
+}
+
+nav button {
+    display: none;
+
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 66px;
+}
+
+nav a {
+    color: var(--links);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.9rem, 1vw, 2rem);
+}
+
+nav a:where(:hover, :focus) {
+    color: var(--sea-green);
+}
+
+
+/* Overlay div */
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1e1e1e;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.overlay.active {
+    opacity: 0.75;
+    pointer-events: all;
+}
+
+/*-----------------------------------*\
+  #MAIN BODY START
+\*-----------------------------------*/
+
+main {}
+
+
+/* polka dots , x-mark, tablet  */
+
+.design {
+    display: flex;
+    align-items: center;
+    gap: 8vw;
+}
+
+
+/* POLKA DOTS 1 */
+
+:where(.polka1, .polka2) img {
+
+    width: 80px;
+    aspect-ratio: 1/1.3;
+
+
+}
+
+.polka1 {
+    padding: 10px 0 10px 10px;
+
+}
+
+/* X-icon & tablet img */
+
+.xtab {
+    display: flex;
+    justify-content: space-between;
+    width: 290px;
+
+}
+
+:is(.xtab, .polka2) i{
+    font-size: 1.25rem;
+    -webkit-text-stroke-width: 2px;
+    color: var(--title);
+}
+
+.xtab img {
+    width: 5vw;
+    min-width: 50px;
+    max-width: 60px;
+    aspect-ratio: 1/1.1;
+    display: block;
+}
+
+
+/*-----------------------------------*\
+  #SECTION 
+\*-----------------------------------*/
+
+
+
+/* circles , kid picture */
+
+.shapes {}
+
+
+.shapes .vw {
+    width: 88vw;
+    height: 67vw;
+    /* max-width: 1306.34px;
+    max-height: 1017.73px; */
+}
+
+/* seagreen circle */
+
+.shapes .svg {
+
+    position: absolute;
+    bottom: 0;
+    background-color: var(--sea-green);
+    clip-path: circle(79% at 17% 145%);
+}
+
+
+/* purple circle */
+
+.shapes .svg1 {
+
+    position: absolute;
+    bottom: 0;
+    background-color: var(--purple);
+    clip-path: circle(54.1% at 29% 121%);
+}
+
+
+/* kid picture circle */
+
+.shapes .kid {
+
+    position: absolute;
+    bottom: 0;
+    background-image: url("./images/kid.png");
+    background-repeat: no-repeat;
+    background-position: -1% 100%;
+    background-size: 69% 41%;
+    clip-path: circle(39.4% at 33% 105%);
+}
+
+
+/* hero section DIV */
+
+section .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-top: -38px;
+    text-align: end;
+}
+
+
+
+.title {
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+    color: var(--title);
+    text-align: center;
+    text-wrap: balance;
+}
+
+.description {
+    max-width: 556px;
+    max-height: 104px;
+    overflow-y: hidden;
+    text-align: end;
+    line-height: 1.3;
+    padding-top: 10px;
+    text-wrap: balance;
+    color: var(--title);
+}
+
+.read-more {
+    margin: 30px 0 16px;
+}
+
+.read-more button {
+    font-family: "Poppins";
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: var(--purple);
+    color: var(--links);
+    padding: 5px 30px;
+    border-radius: 15px;
+    font-size: 0.938rem;
+    width: 160px;
+}
+
+
+.links {
+    position: relative;
+}
+
+.links a{
+    color: var(--purple);
+}
+
+.links img {
+    width: 5vw;
+    min-width: 50px;
+    max-width: 60px;
+    position: absolute;
+    right: 300px;
+    top: -25px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 15px;
+
+}
+
+.social-links a {
+    background-color: var(--purple);
+    display: block;
+    width: 1.563rem;
+    height: 1.563rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--links);
+    border-radius: 50%;
+    padding: 1px;
+}
+
+/* POLKA DOTS 2 */
+
+
+.polka2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: end;
+    gap: 18vw;
+    padding: 0 10px 10px 0;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media(max-width:1330px) {
+
+    .menu {
+        display: initial;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        background-color: var(--purple);
+        height: 100vh;
+        width: min(240px, 100%);
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        transition: transform 0.25s var(--cubic-out) 0.2s;
+        visibility: hidden;
+    }
+
+    nav.active {
+        visibility: visible;
+        transform: translateX(-280px);
+    }
+
+
+    nav button {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        gap: 40px;
+        margin-top: 30px;
+
+    }
+
+}
+
+
+@media(max-width:690px) {
+
+    /* search box 1 (search box on header) */
+
+    .search-box input[type="search"] {
+
+        display: none;
+    }
+
+    .search-box i {
+        pointer-events: all;
+    }
+
+    /* search box 1 (search box on navbar) */
+
+    .search-box-2 {
+        display: flex;
+    }
+
+    /* hamburger menu  */
+
+    .menu {
+        margin-left: auto;
+        font-size: 1.20rem;
+    }
+
+
+}
+
+
+@media(max-width:1000px) {
+
+    .links img {
+
+
+        top: -45px;
+    }
+
+
+}
+
+
+
+@media(max-width:930px) {
+
+    .links img {
+        display: none;
+    }
+}
+
+
+
+@media(max-width:800px) {
+
+
+    .shapes {
+        display: none;
+    }
+
+    section .hero {
+        
+        align-items: center;
+
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .title_p{
+        font-size: 1.8rem;
+        }
+
+
+    .description {
+        text-align: center;
+       
+    }
+
+    .social-links {
+       
+        justify-content: center;
+       
+    }
+
+}
+
+
+@media (max-width:550px){
+
+    :where(.polka1, .polka2) img{
+        width: 55px;
+    }
+
+    section .hero {
+        margin-top: -78px;
+    
+    }
+    
+    .xtab{
+        display: none;
+    }
+
+
+    .polka2 i{
+        display: none;
+    }
+
+   
+}
+
